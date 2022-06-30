@@ -7,6 +7,9 @@ import { ConnectionPageComponent } from './connection-page/connection-page.compo
 import { FooterComponent } from './footer/footer.component';
 import {FooterAboutComponent} from "./footer/footer-about/footer-about.component";
 import {FooterFollowUsComponent} from "./footer/footer-follow-us/footer-follow-us.component";
+import { HeaderComponent } from './header/header.component';
+import {HeaderActionsComponent} from "./header/header-actions/header-actions.component";
+import {HeaderIconComponent} from "./header/header-icon/header-icon.component";
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import {FooterFollowUsComponent} from "./footer/footer-follow-us/footer-follow-u
     ConnectionPageComponent,
     FooterComponent,
     FooterAboutComponent,
-    FooterFollowUsComponent
+    FooterFollowUsComponent,
+    HeaderComponent,
+    HeaderActionsComponent,
+    HeaderIconComponent
   ],
   imports: [
     BrowserModule,
