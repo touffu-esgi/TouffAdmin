@@ -10,6 +10,7 @@ import {FooterFollowUsComponent} from "./footer/footer-follow-us/footer-follow-u
 import { HeaderComponent } from './header/header.component';
 import {HeaderActionsComponent} from "./header/header-actions/header-actions.component";
 import {HeaderIconComponent} from "./header/header-icon/header-icon.component";
+import { UserListPageComponent } from './user-list-page/user-list-page.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {HeaderIconComponent} from "./header/header-icon/header-icon.component";
     FooterFollowUsComponent,
     HeaderComponent,
     HeaderActionsComponent,
-    HeaderIconComponent
+    HeaderIconComponent,
+    UserListPageComponent
   ],
   imports: [
     BrowserModule,
