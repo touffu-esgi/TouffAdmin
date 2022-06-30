@@ -10,11 +10,11 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-      <td>nathan</td>
-      <td>nathan@nathan.nathan</td>
-      <td><button>détail</button></td>
-      <td><button>désactiver</button></td>
+    <tr *ngFor="let provider of providers">
+      <td>{{provider.name}}</td>
+      <td>{{provider.email}}</td>
+      <td><button routerLink="/provider-detail" [queryParams]="{'providerId': provider.id}">détail</button></td>
+      <td><button (click)="deleteProvider()">désactiver</button></td>
     </tr>
     </tbody>
   </table>

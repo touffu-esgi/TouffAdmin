@@ -11,6 +11,6 @@ export class UserService {
   constructor(private http: HttpClient) {}
 
   getProvider(): Observable<Provider[]>{
-    return this.http.get<Provider[]>("http://152.228.219.241/provider")
+    return this.http.get<Provider[]>("http://152.228.219.241:3000/provider", {headers: {'Content': 'application/json'}})
   }
 }
