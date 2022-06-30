@@ -1,0 +1,114 @@
+#mainContainer{
+  padding-top: 45px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  & > div{
+    width: 500px;
+    height: 600px;
+    background-color: #FFF4DE;
+    border-radius: 30px;
+    filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.1));
+  }
+
+  @media screen and (max-width: 1014px) {
+    gap: 70px;
+  }
+}
+
+.smallInputs{
+  padding-top: 69px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  & > input{
+    border: transparent;
+    width: 200px;
+    height: 82px;
+    border-radius: 30px;
+  }
+}
+
+input{
+  background-color: #FBDDA0;
+  &:enabled{
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    padding-left:15px;
+    float:left;
+  }
+
+  &::placeholder{
+    color: rgba(0,0,0,0.3);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bolder;
+  }
+
+  &:focus{
+    outline: none;
+  }
+}
+
+.largeInput{
+  & > div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 45px;
+
+    & > input {
+      border: transparent;
+      width: 440px;
+      height: 82px;
+      border-radius: 30px;
+    }
+  }
+}
+
+#submitButtonContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px;
+
+  & > button{
+    border: transparent;
+    background: #FBC95C;
+    width: 329px;
+    height: 51px;
+    color: white;
+    border-radius: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+  }
+}
+
+.inputIndex{
+  border: unset;
+  outline: unset;
+  appearance: unset;
+  position: relative;
+  top: 22px;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: transparent;
+}
+
+#SearchInput{
+  border: transparent;
+  background: #FBC95C;
+  width: 329px;
+  height: 51px;
+  color: white;
+  border-radius: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  font-size: 20px;
+}
