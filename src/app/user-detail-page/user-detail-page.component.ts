@@ -25,7 +25,7 @@ export class UserDetailPageComponent implements OnInit {
   });
   agreements: Agreement[] = [];
   agreementToDisplay?: Agreement;
-  displayList: boolean = false;
+  displayList: boolean = true;
 
   constructor(
     private activeRoute: ActivatedRoute,
