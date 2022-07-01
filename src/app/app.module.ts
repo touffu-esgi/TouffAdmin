@@ -13,6 +13,7 @@ import {HeaderIconComponent} from "./header/header-icon/header-icon.component";
 import { UserListPageComponent } from './user-list-page/user-list-page.component';
 import {HttpClientModule} from "@angular/common/http";
 import { UserDetailPageComponent } from './user-detail-page/user-detail-page.component';
+import { AgreementCardComponent } from './agreement-card/agreement-card.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { UserDetailPageComponent } from './user-detail-page/user-detail-page.com
     HeaderActionsComponent,
     HeaderIconComponent,
     UserListPageComponent,
-    UserDetailPageComponent
+    UserDetailPageComponent,
+    AgreementCardComponent
   ],
   imports: [
     BrowserModule,
