@@ -1,1 +1,23 @@
-<p>user-detail-page works!</p>
+<app-header></app-header>
+
+<div id="mainContainerProvider">
+  <div id="containerDetail">
+    <p>{{provider.surname}}</p>
+    <p>{{provider.name}}</p>
+    <p>{{provider.email}}</p>
+    <p>{{provider.phone}}</p>
+    <p>{{provider.base_tariff}} €</p>
+  </div>
+  <div id="containerDetailAgreement">
+    <h1>Contrats</h1>
+    <div id="contractList" *ngFor="let agreement of agreements">
+      <p>{{agreement.provider}}</p>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+<app-footer></app-footer>

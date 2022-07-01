@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Provider} from "../domaine/provider/provider";
+import {Agreement} from "../domaine/agreement/agreement";
+import {Recipient} from "../domaine/recipient/recipient";
 
 @Injectable({
   providedIn: 'root'
@@ -12,5 +14,18 @@ export class UserService {
 
   getProvider(): Observable<Provider[]>{
     return this.http.get<Provider[]>("http://152.228.219.241:3000/provider", {headers: {'Content': 'application/json'}})
+  }
+
+  getOneProvider(providerId: string): Observable<Provider> {
+    return this.http.get<Provider>(`http://152.228.219.241:3000/provider/${providerId}`, {headers: {'Content': 'application/json'}})
+  }
+
+  getAgreementOfOneProvider(providerId: string): Observable<Agreement[]>{
+    return this.http.get<Agreement[]>(`http://152.228.219.241:3000/agreement?providerRef=${providerId}`, {headers: {'Content': 'application/json'}})
+  }
+
+  getRecipientByUrl(recipientUrl: string): Observable<Recipient> {
+    return this.http.get<Recipient>(recipientUrl, {headers: {'Content': 'application/json'}})
+
   }
 }
