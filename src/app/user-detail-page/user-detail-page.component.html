@@ -13,7 +13,7 @@
     <div id="contractList" *ngFor="let agreement of agreements" [hidden]="!this.displayList">
       <app-agreement-card (displayAgreement)="displayAgreement($event)" [agreement]="agreement"></app-agreement-card>
     </div>
-    <div id="contractDetail" *ngFor="let agreement of agreements" [hidden]="this.displayList">
+    <div id="contractDetail" [hidden]="this.displayList">
 
     </div>
   </div>

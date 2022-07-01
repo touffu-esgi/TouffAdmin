@@ -14,6 +14,7 @@ import { UserListPageComponent } from './user-list-page/user-list-page.component
 import {HttpClientModule} from "@angular/common/http";
 import { UserDetailPageComponent } from './user-detail-page/user-detail-page.component';
 import { AgreementCardComponent } from './user-detail-page/agreement-card/agreement-card.component';
+import { AgreementDetailComponent } from './agreement-detail/agreement-detail.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AgreementCardComponent } from './user-detail-page/agreement-card/agreem
     HeaderIconComponent,
     UserListPageComponent,
     UserDetailPageComponent,
-    AgreementCardComponent
+    AgreementCardComponent,
+    AgreementDetailComponent
   ],
   imports: [
     BrowserModule,
