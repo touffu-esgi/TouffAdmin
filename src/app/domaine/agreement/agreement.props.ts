@@ -6,9 +6,9 @@ export interface AgreementProps {
   recurrence?: string;
   provider: string;
   recipient: string;
-  animalsRefs: string[];
-  beginningDate: Date;
-  endDate: Date;
+  animals: string[];
+  beginningDate: string;
+  endDate: string;
   duration: number;
   remuneration: number;
   status: string;

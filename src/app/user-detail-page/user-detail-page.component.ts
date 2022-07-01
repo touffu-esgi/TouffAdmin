@@ -25,7 +25,7 @@ export class UserDetailPageComponent implements OnInit {
   });
   agreements: Agreement[] = [];
   agreementToDisplay?: Agreement;
-  displayList: boolean = true;
+  displayList: boolean = false;
 
   constructor(
     private activeRoute: ActivatedRoute,
@@ -48,14 +48,8 @@ export class UserDetailPageComponent implements OnInit {
     })
   }
 
-  getRecipient(recipientUrl: string) {
-    this.userService.getRecipientByUrl(recipientUrl).subscribe(recipient => {
-      console.log(recipient)
-    })
-  }
-
   displayAgreement(agreement: Agreement) {
     this.agreementToDisplay = agreement;
-    console.log(this.agreementToDisplay)
+    this.displayList = false;
   }
 }

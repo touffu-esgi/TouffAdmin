@@ -1,0 +1,27 @@
+
+<div id="mainContainerAgreementDetail">
+  <div class="LineAgreementDetail">
+    <div id="baseTarrif">
+      <p>{{agreement?.remuneration}} €</p>
+    </div>
+    <div id="NumberOfAnimal">
+      <p>{{agreement?.animals?.length}} animaux</p>
+    </div>
+    <div id="beginningDate">
+      <p>{{agreement?.beginningDate ? agreement?.beginningDate!.split("T")[0] : "" }}</p>
+    </div>
+  </div>
+
+  <div class="LineAgreementDetail">
+    <div id="recurrence">
+      <p>{{agreement?.recurrence}}</p>
+    </div>
+    <div id="endDate">
+      <p>{{agreement?.endDate ? agreement?.endDate!.split("T")[0] : "" }}</p>
+    </div>
+  </div>
+  <div class="LineAgreementDetail">
+    <button id="backToList" (click)="back()">List</button>
+  </div>
+</div>
+

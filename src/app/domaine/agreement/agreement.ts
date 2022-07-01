@@ -5,9 +5,9 @@ export class Agreement implements AgreementProps {
  recurring: boolean;
  provider: string;
  recipient: string;
- animalsRefs: string[];
- beginningDate: Date;
- endDate: Date;
+ animals: string[];
+ beginningDate: string;
+ endDate: string;
  recurrence?: string;
  duration: number;
  remuneration: number;
@@ -18,7 +18,7 @@ export class Agreement implements AgreementProps {
     this.recurring = agreementProps.recurring;
     this.provider = agreementProps.provider;
     this.recipient = agreementProps.recipient;
-    this.animalsRefs = agreementProps.animalsRefs;
+    this.animals = agreementProps.animals;
     this.beginningDate = agreementProps.beginningDate;
     this.endDate = agreementProps.endDate;
     this.recurrence = agreementProps.recurrence;
