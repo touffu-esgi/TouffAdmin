@@ -1,25 +1,37 @@
 <app-header></app-header>
-
-<div id="mainContainerProvider">
-  <div id="containerDetail">
-    <p>{{provider.surname}}</p>
-    <p>{{provider.name}}</p>
-    <p>{{provider.email}}</p>
-    <p>{{provider.phone}}</p>
-    <p>{{provider.base_tariff}} €</p>
-  </div>
-  <div id="containerDetailAgreement">
-    <h1>Contrats</h1>
-    <div id="contractList" *ngFor="let agreement of agreements" [hidden]="!this.displayList">
-      <app-agreement-card (displayAgreement)="displayAgreement($event)" [agreement]="agreement"></app-agreement-card>
+<div id="parentContainerProviderDetail">
+  <div id="mainContainerProvider">
+    <div id="containerDetail">
+      <p>{{provider.surname}}</p>
+      <p>{{provider.name}}</p>
+      <p>{{provider.email}}</p>
+      <p>{{provider.phone}}</p>
+      <p>{{provider.base_tariff}} €</p>
     </div>
-    <div id="contractDetail" [hidden]="this.displayList">
-      <app-agreement-detail (backToList)="this.displayList = true" [agreement]="agreementToDisplay"></app-agreement-detail>
+    <div id="containerDetailAgreement">
+      <h1>Contrats</h1>
+      <div id="contractList" *ngFor="let agreement of agreements" [hidden]="!this.displayList">
+        <app-agreement-card (displayAgreement)="displayAgreement($event)" [agreement]="agreement"></app-agreement-card>
+      </div>
+      <div id="contractDetail" [hidden]="this.displayList">
+        <app-agreement-detail (backToList)="this.displayList = true" [agreement]="agreementToDisplay"></app-agreement-detail>
+      </div>
     </div>
   </div>
 
+  <div id="reportContainer">
+    <h1>Report</h1>
+    <div id="recommendationCardContainer" *ngFor="let report of reports">
+      <div id="card">
+        <h4>{{report._dateReported}}</h4>
+        <p>{{report._comment}}</p>
+      </div>
+      <div id="stylePlacement"></div>
+    </div>
+  </div>
 
 </div>
+
 
 
 

@@ -4,13 +4,15 @@ import {Observable} from "rxjs";
 import {Provider} from "../domaine/provider/provider";
 import {Agreement} from "../domaine/agreement/agreement";
 import {Recipient} from "../domaine/recipient/recipient";
+import {Report} from "../domaine/report/report";
+import {HttpUtils} from "../utils/http.utils";
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private httpUtils: HttpUtils) {}
 
   getProvider(): Observable<Provider[]>{
     return this.http.get<Provider[]>("http://152.228.219.241:3000/provider", {headers: {'Content': 'application/json'}})
@@ -26,6 +28,9 @@ export class UserService {
 
   getRecipientByUrl(recipientUrl: string): Observable<Recipient> {
     return this.http.get<Recipient>(recipientUrl, {headers: {'Content': 'application/json'}})
+  }
 
+  getProviderReports(providerId: string): Observable<Report[]> {
+    return this.http.get<Report[]>(`${this.httpUtils.fullUrl()}/report/${providerId}`, {headers: {'Content': 'application/json'}})
   }
 }

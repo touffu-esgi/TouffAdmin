@@ -32,3 +32,48 @@ p{
 *{
   font-family: 'Montserrat', sans-serif;
 }
+
+#parentContainerProviderDetail{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 100px;
+}
+
+
+#card{
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.05);
+  width: 650px;
+  height: 200px;
+  border-radius: 30px;
+
+  h4{
+    padding-left: 30px;
+    padding-top: 30px;
+  }
+  p{
+    padding-left: 30px;
+  }
+}
+
+#stylePlacement{
+  width: 25px;
+  height: 200px;
+}
+
+#reportContainer{
+  padding-top: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  h1{
+    margin-left: 15.5vw;
+  }
+}
+
+#recommendationCardContainer{
+  display: flex;
+  justify-content: space-around;
+}
+
