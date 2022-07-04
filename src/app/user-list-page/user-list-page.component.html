@@ -3,15 +3,17 @@
   <table>
     <thead>
     <tr>
-      <th >nom</th>
-      <th >email</th>
-      <th >détails</th>
-      <th >désactiver</th>
+      <th >Prénom</th>
+      <th >Nom</th>
+      <th >Email</th>
+      <th >Détails</th>
+      <th >Désactiver</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let provider of providers">
       <td>{{provider.name}}</td>
+      <td>{{provider.surname}}</td>
       <td>{{provider.email}}</td>
       <td><button routerLink="/provider-detail" [queryParams]="{'providerId': provider.id}">détail</button></td>
       <td><button (click)="deleteProvider()">désactiver</button></td>
