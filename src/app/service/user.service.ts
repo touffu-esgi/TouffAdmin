@@ -35,7 +35,7 @@ export class UserService {
     return this.http.get<Report[]>(`${this.httpUtils.fullUrl()}/report/${providerId}`, {headers: {'Content': 'application/json'}})
   }
 
-  getUserByEmailAndPassword(provider: Provider): Observable<User>{
+  getUserByEmail(provider: Provider): Observable<User>{
     const body = JSON.stringify({email: provider.email, password: provider.password});
     return this.http.post<User>(`${this.httpUtils.fullUrl()}/user/login`, body, {headers: {'Content-Type': 'application/json'}})
   }
