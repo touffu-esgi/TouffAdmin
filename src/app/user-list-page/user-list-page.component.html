@@ -3,10 +3,10 @@
   <table>
     <thead>
     <tr>
-      <th >nom</th>
-      <th >email</th>
-      <th >détails</th>
-      <th >désactiver</th>
+      <th>nom</th>
+      <th>email</th>
+      <th>détails</th>
+      <th>Suspendre</th>
     </tr>
     </thead>
     <tbody>
@@ -14,7 +14,7 @@
       <td>{{provider.name}}</td>
       <td>{{provider.email}}</td>
       <td><button routerLink="/provider-detail" [queryParams]="{'providerId': provider.id}">détail</button></td>
-      <td><button (click)="deleteProvider()">désactiver</button></td>
+      <td><button (click)="deleteProvider(provider)">Suspendre</button></td>
     </tr>
     </tbody>
   </table>

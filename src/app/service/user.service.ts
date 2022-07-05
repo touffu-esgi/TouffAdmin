@@ -6,6 +6,7 @@ import {Agreement} from "../domaine/agreement/agreement";
 import {Recipient} from "../domaine/recipient/recipient";
 import {Report} from "../domaine/report/report";
 import {HttpUtils} from "../utils/http.utils";
+import {User} from "../domaine/user/user";
 
 @Injectable({
   providedIn: 'root'
@@ -15,15 +16,15 @@ export class UserService {
   constructor(private http: HttpClient, private httpUtils: HttpUtils) {}
 
   getProvider(): Observable<Provider[]>{
-    return this.http.get<Provider[]>("http://152.228.219.241:3000/provider", {headers: {'Content': 'application/json'}})
+    return this.http.get<Provider[]>(`${this.httpUtils.fullUrl()}/provider`, {headers: {'Content': 'application/json'}})
   }
 
   getOneProvider(providerId: string): Observable<Provider> {
-    return this.http.get<Provider>(`http://152.228.219.241:3000/provider/${providerId}`, {headers: {'Content': 'application/json'}})
+    return this.http.get<Provider>(`${this.httpUtils.fullUrl()}/provider/${providerId}`, {headers: {'Content': 'application/json'}})
   }
 
   getAgreementOfOneProvider(providerId: string): Observable<Agreement[]>{
-    return this.http.get<Agreement[]>(`http://152.228.219.241:3000/agreement?providerRef=${providerId}`, {headers: {'Content': 'application/json'}})
+    return this.http.get<Agreement[]>(`${this.httpUtils.fullUrl()}/agreement?providerRef=${providerId}`, {headers: {'Content': 'application/json'}})
   }
 
   getRecipientByUrl(recipientUrl: string): Observable<Recipient> {
@@ -32,5 +33,15 @@ export class UserService {
 
   getProviderReports(providerId: string): Observable<Report[]> {
     return this.http.get<Report[]>(`${this.httpUtils.fullUrl()}/report/${providerId}`, {headers: {'Content': 'application/json'}})
+  }
+
+  getUserByEmailAndPassword(provider: Provider): Observable<User>{
+    const body = JSON.stringify({email: provider.email, password: provider.password});
+    return this.http.post<User>(`${this.httpUtils.fullUrl()}/user/login`, body, {headers: {'Content-Type': 'application/json'}})
+  }
+
+  blockOneUser(provider: Provider){
+
+
   }
 }

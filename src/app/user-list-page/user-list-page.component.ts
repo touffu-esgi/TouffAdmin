@@ -17,7 +17,11 @@ export class UserListPageComponent implements OnInit {
     })
   }
 
-  deleteProvider() {
-    //TODO
+  deleteProvider(provider: Provider) {
+    this.userService.getUserByEmailAndPassword(provider).subscribe(user => {
+      console.log(user)
+    }, error => {
+      console.log(error)
+    })
   }
 }
