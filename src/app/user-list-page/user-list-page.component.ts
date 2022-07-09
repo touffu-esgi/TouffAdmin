@@ -9,6 +9,9 @@ import {Provider} from "../domaine/provider/provider";
 })
 export class UserListPageComponent implements OnInit {
   providers?: Provider[]
+  reportSendOk: boolean | null = null
+  errorMsg: string = "An error occurred";
+
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
@@ -19,9 +22,10 @@ export class UserListPageComponent implements OnInit {
 
   deleteProvider(provider: Provider) {
     this.userService.UpdateUserByUserId(provider.userId!, 'blocked').subscribe(user => {
-      console.log(user)
+      this.reportSendOk = true;
     }, error => {
-      console.log(error)
+      if (error.error.message) this.errorMsg = error.error.message
+      this.reportSendOk = false;
     })
   }
 }

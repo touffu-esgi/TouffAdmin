@@ -18,5 +18,13 @@
     </tr>
     </tbody>
   </table>
+  <div class="alertMsg" id="errorMsg" *ngIf="this.reportSendOk === false">
+    <p>{{this.errorMsg}}</p>
+  </div>
+  <div class="alertMsg" id="successMsg" *ngIf="this.reportSendOk === true">
+    <p>L'utilisateur a été signalé !</p>
+  </div>
 </div>
+
+
 <app-footer></app-footer>

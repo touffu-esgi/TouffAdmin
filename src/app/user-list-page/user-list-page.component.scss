@@ -3,9 +3,7 @@ div{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
-
-
+  gap: 50px;
 }
 
 th{
@@ -23,4 +21,23 @@ table{
 th, td{
   border: 1px solid black;
   padding: 10px;
+}
+
+.alertMsg {
+  display: flex;
+  justify-content: center;
+  width: 330px;
+  border-radius: 15px;
+}
+
+#errorMsg {
+  background: rgba(255, 0, 0, 0.1);
+  color: rgba(255, 0, 0, 0.5);
+  border: 2px rgba(255, 0, 0, 0.5) solid;
+}
+
+#successMsg {
+  background: rgba(35,180,27, 0.1);
+  color: rgba(35,180,27, 0.5);
+  border: 2px rgba(35,180,27, 0.5) solid;
 }
