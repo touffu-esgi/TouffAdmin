@@ -10,4 +10,5 @@ export class ProviderProps {
   radius?: number;
   profile_title?: string;
   profile_desc?: string;
+  userId?: string;
 }

@@ -35,13 +35,8 @@ export class UserService {
     return this.http.get<Report[]>(`${this.httpUtils.fullUrl()}/report/${providerId}`, {headers: {'Content': 'application/json'}})
   }
 
-  getUserByEmail(provider: Provider): Observable<User>{
-    const body = JSON.stringify({email: provider.email, password: provider.password});
-    return this.http.post<User>(`${this.httpUtils.fullUrl()}/user/login`, body, {headers: {'Content-Type': 'application/json'}})
-  }
-
-  blockOneUser(provider: Provider){
-
-
+  UpdateUserByUserId(userId: string, status: string): Observable<User>{
+    const body = JSON.stringify({"userId": userId, "status": status})
+    return this.http.put<User>(`${this.httpUtils.fullUrl()}/user/${userId}`, body, {headers: {'Content-type': 'application/json'}});
   }
 }

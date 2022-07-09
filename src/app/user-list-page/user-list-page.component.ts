@@ -18,8 +18,7 @@ export class UserListPageComponent implements OnInit {
   }
 
   deleteProvider(provider: Provider) {
-    console.log(provider)
-    this.userService.getUserByEmail(provider).subscribe(user => {
+    this.userService.UpdateUserByUserId(provider.userId!, 'blocked').subscribe(user => {
       console.log(user)
     }, error => {
       console.log(error)

@@ -12,6 +12,8 @@ export class Provider implements ProviderProps {
   radius: number;
   profile_title: string;
   profile_desc: string;
+  userId?: string;
+
 
   constructor(providerProps: ProviderProps) {
     this.id = providerProps.id!;
@@ -25,6 +27,7 @@ export class Provider implements ProviderProps {
     this.radius = providerProps.radius!;
     this.profile_title = providerProps.profile_title!;
     this.profile_desc = providerProps.profile_desc!;
+    this.userId = providerProps.userId
   }
 }
 
