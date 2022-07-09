@@ -1,4 +1,5 @@
 import {ProviderProps} from "./providerProps";
+import {User} from "../user/user";
 
 export class Provider implements ProviderProps {
   id: string;
@@ -13,7 +14,7 @@ export class Provider implements ProviderProps {
   profile_title: string;
   profile_desc: string;
   userId?: string;
-
+  userObject?: User;
 
   constructor(providerProps: ProviderProps) {
     this.id = providerProps.id!;
@@ -28,6 +29,7 @@ export class Provider implements ProviderProps {
     this.profile_title = providerProps.profile_title!;
     this.profile_desc = providerProps.profile_desc!;
     this.userId = providerProps.userId
+    this.userObject = providerProps.userObject;
   }
 }
 

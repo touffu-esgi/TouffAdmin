@@ -1,0 +1,10 @@
+#starContainer{
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+#starContainer > p {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 12px;
+}

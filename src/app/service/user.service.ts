@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {mergeMap, Observable} from "rxjs";
 import {Provider} from "../domaine/provider/provider";
 import {Agreement} from "../domaine/agreement/agreement";
 import {Recipient} from "../domaine/recipient/recipient";
@@ -17,6 +17,10 @@ export class UserService {
 
   getProvider(): Observable<Provider[]>{
     return this.http.get<Provider[]>(`${this.httpUtils.fullUrl()}/provider`, {headers: {'Content': 'application/json'}})
+  }
+
+  getUserById(userId: string): Observable<User>{
+    return this.http.get<User>(`${this.httpUtils.fullUrl()}/user/${userId}`, {headers: {'Content': 'application/json'}})
   }
 
   getOneProvider(providerId: string): Observable<Provider> {
@@ -37,6 +41,7 @@ export class UserService {
 
   UpdateUserByUserId(userId: string, status: string): Observable<User>{
     const body = JSON.stringify({"userId": userId, "status": status})
+    console.log(status)
     return this.http.put<User>(`${this.httpUtils.fullUrl()}/user/${userId}`, body, {headers: {'Content-type': 'application/json'}});
   }
 }

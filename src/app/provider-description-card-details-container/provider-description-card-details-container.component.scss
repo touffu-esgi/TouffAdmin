@@ -1,0 +1,24 @@
+
+#providerCard{
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.05);
+  width: 353px;
+  height: 441px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#providerCard > *{
+  display: flex;
+  justify-content: center;
+}
+
+#providerName{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  margin: 9px 0 0 0;
+}
+
+

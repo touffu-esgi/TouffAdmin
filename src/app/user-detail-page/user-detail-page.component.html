@@ -1,13 +1,8 @@
 <app-header></app-header>
 <div id="parentContainerProviderDetail">
   <div id="mainContainerProvider">
-    <div id="containerDetail">
-      <p>{{provider.surname}}</p>
-      <p>{{provider.name}}</p>
-      <p>{{provider.email}}</p>
-      <p>{{provider.phone}}</p>
-      <p>{{provider.base_tariff}} €</p>
-    </div>
+    <app-provider-description-card-details-container [name]="provider.name" [base_tarif]="provider.base_tariff" [id]="provider.id" ></app-provider-description-card-details-container>
+
     <div id="containerDetailAgreement">
       <h1>Contrats</h1>
       <div id="contractList" *ngFor="let agreement of agreements" [hidden]="!this.displayList">

@@ -3,7 +3,7 @@ export class User {
   private readonly _email
   private readonly _userType
   private readonly _userReference
-  private readonly _status
+  public status
   private readonly _profilePic
 
   constructor(id: string, email: string, userType: string, userReference: string, status: string, profilePic: string) {
@@ -11,7 +11,7 @@ export class User {
     this._email = email;
     this._userType = userType;
     this._userReference = userReference;
-    this._status = status;
+    this.status = status;
     this._profilePic = profilePic;
   }
 
@@ -29,10 +29,6 @@ export class User {
 
   get userReference() {
     return this._userReference;
-  }
-
-  get status() {
-    return this._status;
   }
 
   get profilePic() {
