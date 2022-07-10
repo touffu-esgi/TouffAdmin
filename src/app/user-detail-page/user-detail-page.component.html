@@ -1,7 +1,11 @@
 <app-header></app-header>
 <div id="parentContainerProviderDetail">
   <div id="mainContainerProvider">
-    <app-provider-description-card-details-container [name]="provider.name" [base_tarif]="provider.base_tariff" [id]="provider.id" ></app-provider-description-card-details-container>
+    <app-provider-description-card-details-container
+      [name]="provider.name"
+      [base_tarif]="provider.base_tariff"
+      [id]="provider.id" >
+    </app-provider-description-card-details-container>
 
     <div id="containerDetailAgreement">
       <h1>Contrats</h1>

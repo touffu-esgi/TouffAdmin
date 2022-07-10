@@ -41,7 +41,6 @@ export class UserService {
 
   UpdateUserByUserId(userId: string, status: string): Observable<User>{
     const body = JSON.stringify({"userId": userId, "status": status})
-    console.log(status)
     return this.http.put<User>(`${this.httpUtils.fullUrl()}/user/${userId}`, body, {headers: {'Content-type': 'application/json'}});
   }
 }
