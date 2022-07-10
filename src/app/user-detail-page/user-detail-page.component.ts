@@ -71,7 +71,6 @@ export class UserDetailPageComponent implements OnInit {
           report._reportedByUserId = recipient.name;
         })
       })
-
     });
   }
 }
