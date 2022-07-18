@@ -1,3 +1,5 @@
+import {User} from "../user/user";
+
 export class ProviderProps {
   id?: string;
   name?: string;
@@ -10,4 +12,7 @@ export class ProviderProps {
   radius?: number;
   profile_title?: string;
   profile_desc?: string;
+  userId?: string;
+  userObject?: User;
+  profile_pic?: string;
 }

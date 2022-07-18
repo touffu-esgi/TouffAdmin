@@ -3,13 +3,13 @@
   <div>
     <div class="largeInput">
       <div id="emailContainer">
-        <input name="email" placeholder="Email" type="text">
+        <input name="email" [(ngModel)]="admin.email" placeholder="Email" type="text">
       </div>
       <div>
-        <input name="password" placeholder="Password" type="text">
+        <input name="password" [(ngModel)]="admin.password" placeholder="Password" type="password">
       </div>
       <div>
-        <button class="inputIndex" id="SearchInput">Me connecter</button>
+        <button class="inputIndex" (click)="signIn()" id="SearchInput">Me connecter</button>
       </div>
     </div>
   </div>

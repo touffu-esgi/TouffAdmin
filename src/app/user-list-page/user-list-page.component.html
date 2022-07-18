@@ -3,11 +3,11 @@
   <table>
     <thead>
     <tr>
-      <th >Prénom</th>
-      <th >Nom</th>
-      <th >Email</th>
-      <th >Détails</th>
-      <th >Désactiver</th>
+      <th>Prénom</th>
+      <th>Nom</th>
+      <th>Email</th>
+      <th>Détails</th>
+      <th>Action</th>
     </tr>
     </thead>
     <tbody>
@@ -16,9 +16,21 @@
       <td>{{provider.surname}}</td>
       <td>{{provider.email}}</td>
       <td><button routerLink="/provider-detail" [queryParams]="{'providerId': provider.id}">détail</button></td>
-      <td><button (click)="deleteProvider()">désactiver</button></td>
+
+      <td>
+        <button *ngIf="provider.userObject?.status! == 'blocked' " (click)="reactiveUser(provider)">Réactiver</button>
+        <button *ngIf="provider.userObject?.status! == 'active' " (click)="blockUser(provider)">Suspendre</button>
+      </td>
     </tr>
     </tbody>
   </table>
+  <div class="alertMsg" id="errorMsg" *ngIf="this.reportSendOk === false">
+    <p>{{this.errorMsg}}</p>
+  </div>
+  <div class="alertMsg" id="successMsg" *ngIf="this.reportSendOk === true">
+    <p>{{updateMessage}}</p>
+  </div>
 </div>
+
+
 <app-footer></app-footer>

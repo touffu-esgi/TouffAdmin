@@ -15,6 +15,19 @@ import {HttpClientModule} from "@angular/common/http";
 import { UserDetailPageComponent } from './user-detail-page/user-detail-page.component';
 import { AgreementCardComponent } from './user-detail-page/agreement-card/agreement-card.component';
 import { AgreementDetailComponent } from './user-detail-page/agreement-detail/agreement-detail.component';
+import {
+  ProviderDescriptionCardDetailsContainerComponent
+} from "./provider-description-card-details-container/provider-description-card-details-container.component";
+import {
+  ProviderDescriptionCardDetailsContactComponent
+} from "./provider-description-card-details-container/provider-description-card-details-contact/provider-description-card-details-contact.component";
+import {
+  ProviderDescriptionCardDetailsGradesComponent
+} from "./provider-description-card-details-container/provider-description-card-details-grades/provider-description-card-details-grades.component";
+import {
+  ProviderDescriptionCardDetailsPriceComponent
+} from "./provider-description-card-details-container/provider-description-card-details-price/provider-description-card-details-price.component";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -29,13 +42,18 @@ import { AgreementDetailComponent } from './user-detail-page/agreement-detail/ag
     UserListPageComponent,
     UserDetailPageComponent,
     AgreementCardComponent,
-    AgreementDetailComponent
+    AgreementDetailComponent,
+    ProviderDescriptionCardDetailsContainerComponent,
+    ProviderDescriptionCardDetailsContactComponent,
+    ProviderDescriptionCardDetailsGradesComponent,
+    ProviderDescriptionCardDetailsPriceComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

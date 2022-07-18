@@ -16,7 +16,7 @@ export class AgreementCardComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
-    this.userService.getRecipientByUrl(this.agreement!.provider).subscribe(Recipient => {
+    this.userService.getRecipientByUrl(this.agreement?.providerRef!).subscribe(Recipient => {
       this.recipient = Recipient;
     })
   }
