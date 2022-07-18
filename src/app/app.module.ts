@@ -27,6 +27,7 @@ import {
 import {
   ProviderDescriptionCardDetailsPriceComponent
 } from "./provider-description-card-details-container/provider-description-card-details-price/provider-description-card-details-price.component";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -47,11 +48,12 @@ import {
     ProviderDescriptionCardDetailsGradesComponent,
     ProviderDescriptionCardDetailsPriceComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
