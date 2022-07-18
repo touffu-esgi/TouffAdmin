@@ -9,7 +9,7 @@
         <input name="password" [(ngModel)]="admin.password" placeholder="Password" type="password">
       </div>
       <div>
-        <button class="inputIndex" id="SearchInput">Me connecter</button>
+        <button class="inputIndex" (click)="signIn()" id="SearchInput">Me connecter</button>
       </div>
     </div>
   </div>
