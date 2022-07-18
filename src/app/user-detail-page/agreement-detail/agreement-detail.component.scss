@@ -1,0 +1,40 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+
+#mainContainerAgreementDetail{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.LineAgreementDetail{
+  display: flex;
+  justify-content: space-around;
+
+  div{
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 30px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+#backToList{
+  height: 50px;
+  width: 150px;
+  border-radius: 30px;
+  border-color: transparent;
+  background-color: #FBC95C;
+  color: #FFFFFF;
+  font-size: 25px;
+  font-weight: bold;
+  outline: transparent;
+}
+
+#backToList:hover{
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
