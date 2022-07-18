@@ -14,4 +14,5 @@ export class ProviderProps {
   profile_desc?: string;
   userId?: string;
   userObject?: User;
+  profile_pic?: string;
 }

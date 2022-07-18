@@ -45,7 +45,14 @@ export class UserService {
   }
 
   getAverage (providerId: string): Observable<{average: number}>{
-    console.log(providerId)
     return this.http.get<{average: number}>(this.httpUtils.fullUrl() + `/recommendation/average/${providerId}`)
+  }
+
+  getFile(imagePath: string): Observable<object>{
+    if (imagePath.length == 0){
+      imagePath = "default.png";
+    }
+    // @ts-ignore
+    return this.http.get<object>(`${this.httpUtils.fullUrl()}/user/profileImage/${imagePath}`, { responseType: 'blob' })
   }
 }

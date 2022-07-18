@@ -15,6 +15,8 @@ export class Provider implements ProviderProps {
   profile_desc: string;
   userId?: string;
   userObject?: User;
+  profile_pic?: string;
+
 
   constructor(providerProps: ProviderProps) {
     this.id = providerProps.id!;
@@ -30,6 +32,7 @@ export class Provider implements ProviderProps {
     this.profile_desc = providerProps.profile_desc!;
     this.userId = providerProps.userId
     this.userObject = providerProps.userObject;
+    this.profile_pic = providerProps.profile_pic;
   }
 }
 
