@@ -1,6 +1,6 @@
 <div id="providerCard">
   <p id="providerName">{{name}}</p>
-  <app-provider-description-card-details-grades></app-provider-description-card-details-grades>
+  <app-provider-description-card-details-grades [providerId]="id!"></app-provider-description-card-details-grades>
   <app-provider-description-card-details-price [base_tarif]="base_tarif" ></app-provider-description-card-details-price>
   <app-provider-description-card-details-contact [id]="id"></app-provider-description-card-details-contact>
 </div>

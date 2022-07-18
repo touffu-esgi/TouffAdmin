@@ -43,4 +43,9 @@ export class UserService {
     const body = JSON.stringify({"userId": userId, "status": status})
     return this.http.put<User>(`${this.httpUtils.fullUrl()}/user/${userId}`, body, {headers: {'Content-type': 'application/json'}});
   }
+
+  getAverage (providerId: string): Observable<{average: number}>{
+    console.log(providerId)
+    return this.http.get<{average: number}>(this.httpUtils.fullUrl() + `/recommendation/average/${providerId}`)
+  }
 }
