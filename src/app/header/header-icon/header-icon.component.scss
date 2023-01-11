@@ -1,0 +1,21 @@
+#iconAndTitleContainer {
+  padding-left: 20px;
+}
+
+.icon {
+  height: 60px;
+}
+
+.icon-title {
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: #FBC95C;
+  margin-left: 13px;
+  margin-top: 19px;
+}
+
+#iconAndTitleContainer{
+  display: flex;
+  flex-direction: row;
+}

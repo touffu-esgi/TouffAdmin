@@ -1,0 +1,17 @@
+<app-header></app-header>
+<div id="mainContainer">
+  <div>
+    <div class="largeInput">
+      <div id="emailContainer">
+        <input name="email" [(ngModel)]="admin.email" placeholder="Email" type="text">
+      </div>
+      <div>
+        <input name="password" [(ngModel)]="admin.password" placeholder="Password" type="password">
+      </div>
+      <div>
+        <button class="inputIndex" (click)="signIn()" id="SearchInput">Me connecter</button>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
